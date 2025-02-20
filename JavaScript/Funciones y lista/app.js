@@ -1,3 +1,6 @@
+let numeroSecreto = generarNumeroSecreto();
+console.log(numeroSecreto);
+
 //Aqui estamos seleccionando el h1 y dando le un valor, en este caso el titulo es: Juego del numero secreto
 /*let titulo = document.querySelector('h1');
 titulo.innerHTML = ("Hora del Desafío");
@@ -10,12 +13,19 @@ parrafo.innerHTML = ("Indica un numero del 1 al 10");*/
 //Otra opcion mejor a la hora de llamar o designar un titulo o parrafo
 function asignarTextoElemento(elemento,texto){
     let elementoHTML = document.querySelector(elemento);
-    elementoHTML.innerHTML = (texto);
+    elementoHTML.innerHTML = texto;
+    return;
 }
 
 //Aqui llamamos al metodo intento de usuario donde en el realizamos la logica para esta funcion.
 function intentoDeUsuario(){
     alert('El boton fue clicado');
+    return;
+}
+
+function generarNumeroSecreto(numero){
+    return Math.floor(Math.random()*10)+1;
+    
 }
 
 //Llamamos a la funcion creada para designarle lo que deseamos al elemento.
