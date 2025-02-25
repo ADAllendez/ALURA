@@ -1,4 +1,4 @@
-function titulo(){
+/*function titulo(){
     console.log("Hola, mundo!");
      return;
  }
@@ -41,4 +41,4 @@ console.log(prom);
 let numMayor = mayor(3,1)
 console.log(numMayor);
 let porSiMismo = multiplicarPorSiMismo(10);
-console.log(porSiMismo);
+console.log(porSiMismo);*/

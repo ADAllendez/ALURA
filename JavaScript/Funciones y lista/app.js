@@ -1,6 +1,7 @@
-let numeroSecreto = generarNumeroSecreto();
-let intentos = 1 ;
-console.log(numeroSecreto);
+let numeroSecreto = 0;
+let intentos = 0;
+let listaNumerosSorteados = [];
+let numeroMaximo = 10;
 
 //Aqui estamos seleccionando el h1 y dando le un valor, en este caso el titulo es: Juego del numero secreto
 /*let titulo = document.querySelector('h1');
@@ -43,13 +44,24 @@ function limpiar(){
 
 
 function generarNumeroSecreto(numero){
-    return Math.floor(Math.random()*10)+1;
-    
+    let numeroGenerado =  Math.floor(Math.random()*numeroMaximo)+1;
+    console.log (listaNumerosSorteados);
+    // Si ya sorteamos todos los numeros
+    if(listaNumerosSorteados.length == numeroMaximo){
+        asignarTextoElemento('p',"Ya se sortearon todos los numeros");
+    }else{
+        // Si el numero generado esta incluido en la lista...
+        if(listaNumerosSorteados.includes(numeroGenerado)){
+        return generarNumeroSecreto();
+        }else{
+        listaNumerosSorteados.push(numeroGenerado);
+        return numeroGenerado;
+        }
+    }
 }
-
 function condicionesIniciales(){
     asignarTextoElemento('h1',"Hora del Desafío");
-    asignarTextoElemento('p',"Indica un numero del 1 al 10");
+    asignarTextoElemento('p',`Indica un numero del 1 al ${numeroMaximo}`);
     numeroSecreto = generarNumeroSecreto();
     intentos = 1;
 }
@@ -65,10 +77,6 @@ function reiniciarJuego(){
     document.querySelector('#reiniciar').setAttribute('disabled','true');
     
 }
-
-
-
-
 
 //Llamamos a la funcion creada para designarle lo que deseamos al elemento.
 // Donde espera recibir un elemento tipo h1,h2,p,etc; junto con su texto o lo que querramos designar.

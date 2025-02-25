@@ -1,5 +1,5 @@
 //1.Crea una función que calcule el índice de masa corporal (IMC) de una persona a partir de su altura en metros y peso en kilogramos, que se recibirán como parámetros.
-
+/*
 function imc(peso,altura){
     let masa = peso / (altura*altura);
     return masa;
@@ -45,4 +45,4 @@ function tabla(numero){
         var resultado = numero * i;
         console.log(numero + " x " + i + " = " + resultado);
       }
-}
+}*/

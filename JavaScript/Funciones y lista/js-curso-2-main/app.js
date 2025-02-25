@@ -1,4 +1,4 @@
-let titulo = document.querySelector('h1');
+/*let titulo = document.querySelector('h1');
 titulo.innerHTML = ("Hora del Desafío");
 
 function clickConsole(){
@@ -19,4 +19,4 @@ function sumar(){
     let num2 = parseFloat(prompt("Ingrese el segundo numero a sumar"));
     resultado = num1 + num2 ;
     alert(`El resultado es: ${resultado}`);
-}
+}*/
